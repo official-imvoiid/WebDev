@@ -1,0 +1,24 @@
+/* AchievementsSection.css */
+.achievements {
+  padding: 2rem;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.achievements .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.achievements .card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+}

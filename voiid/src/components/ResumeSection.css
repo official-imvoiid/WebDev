@@ -1,0 +1,20 @@
+/* ResumeSection.css */
+.resume {
+  text-align: center;
+  padding: 2rem;
+  background: #222;
+  color: white;
+}
+
+.resume a {
+  background: #ff9800;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.resume a:hover {
+  background: #e68900;
+}

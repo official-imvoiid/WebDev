@@ -1,0 +1,48 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container to center and align content */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Responsive Grid Layout */
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Responsive Sections */
+section {
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}

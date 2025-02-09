@@ -1,0 +1,23 @@
+/* WhatIDoSection.css */
+.what-i-do {
+  text-align: center;
+  padding: 2rem;
+  background: #1e1e1e;
+  color: white;
+}
+
+.what-i-do h2 {
+  font-size: 2rem;
+}
+
+.what-i-do .skills {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.what-i-do .skill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
