@@ -1,5 +1,3 @@
----
-
 # 🌍 Hadiya Foundation  
 **A Charity Website - Under Construction**  
 
@@ -37,4 +35,3 @@ Voiid is my personal portfolio website, designed to showcase my projects, skills
 
 More updates coming soon! 🚀  
 
----
