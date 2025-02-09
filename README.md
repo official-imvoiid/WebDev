@@ -1,6 +1,7 @@
+---
 
 # 🌍 Hadiya Foundation  
-*A Charity Website - Under Construction*  
+**A Charity Website - Under Construction**  
 
 Hadiya Foundation is a charity website currently being developed using **React** and other modern web technologies. Our mission is to build a platform that empowers communities through charitable initiatives.  
 
@@ -8,19 +9,18 @@ Hadiya Foundation is a charity website currently being developed using **React**
 
 ## 🛠 Tech Stack  
 - React.js  
-- (Add other technologies as needed)  
+- (Other technologies to be added)  
 
-## 📌 Features (Planned)  
-- Donation Platform  
-- Volunteer Registration  
-- Awareness Blog  
+## 📌 Planned Features  
+✔️ Donation Platform  
+✔️ Awareness Blog  
 
 Stay tuned for updates!  
 
 ---
 
 # 💻 Voiid  
-*A Personal Portfolio - Under Construction*  
+**A Personal Portfolio - Under Construction**  
 
 Voiid is my personal portfolio website, designed to showcase my projects, skills, and achievements in web development and cybersecurity. Built with **React** and modern web development technologies, this site will serve as my digital identity.  
 
@@ -28,11 +28,13 @@ Voiid is my personal portfolio website, designed to showcase my projects, skills
 
 ## 🛠 Tech Stack  
 - React.js  
-- (Add other technologies as needed)  
+- (Other technologies as well)  
 
-## 📌 Features (Planned)  
-- Project Showcase  
-- Resume & Contact  
-- Blog Section  
+## 📌 Planned Features  
+✔️ Project Showcase  
+✔️ Resume & Contact Section  
+✔️ A Centralized Hub to Connect All My Social Media Channels  
 
-More updates coming soon!  
+More updates coming soon! 🚀  
+
+---
