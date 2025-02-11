@@ -1,24 +1,7 @@
-/* AchievementsSection.css */
-.achievements {
-  padding: 2rem;
-  background: #1e1e1e;
-  color: white;
-  text-align: center;
-}
-
-.achievements h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.achievements .cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.achievements .card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 10px;
-}
+          <div className="bg-gray-800 rounded-2xl p-6">
+            <div className="text-sm text-gray-400 mb-2">Recent</div>
+            <div className="flex justify-between items-center">
+              <h2 className="text-xl">Achievements</h2>
+              <div className="text-gray-400">→</div>
+            </div>
+          </div>
