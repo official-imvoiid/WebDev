@@ -1,18 +1,7 @@
-/* AboutSection.css */
 .about-section {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  background-color: #1a1a1a;
   color: white;
   text-align: center;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
-}
