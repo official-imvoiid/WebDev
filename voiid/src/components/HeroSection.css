@@ -1,18 +1,5 @@
-/* HeroSection.css */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #181818;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  max-width: 600px;
-  margin: auto;
-}
+<div className="bg-gray-800 rounded-2xl p-6">
+            <div className="w-12 h-12 bg-blue-600 rounded-full mb-4"></div>
+            <h1 className="text-2xl font-semibold mb-2">Hey, I'm Voiid 👋</h1>
+            <p className="text-gray-400">"A Developer & CyberSecurity Student"</p>
+          </div>
