@@ -1,19 +1,12 @@
-/* Header.css */
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #111;
-  color: white;
-  align-items: center;
-}
-
-.header a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-.header a:hover {
-  color: #ff9800;
-}
+<header className="w-full p-6 flex justify-between items-center">
+        <div className="text-xl font-bold text-white">VOIID</div>
+        <nav className="flex space-x-6 items-center">
+          <a href="#work" className="text-sm text-gray-300 hover:text-white">Work</a>
+          <a href="#home" className="text-sm text-gray-300 hover:text-white">Home</a>
+          <a href="#about" className="text-sm text-gray-300 hover:text-white">About</a>
+          <a href="#resume" className="text-sm text-gray-300 hover:text-white">Resume</a>
+          <button className="bg-white text-black text-sm px-4 py-2 rounded-full">
+            GET IN TOUCH
+          </button>
+        </nav>
+      </header>
