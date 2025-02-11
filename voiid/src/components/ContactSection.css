@@ -1,21 +1,6 @@
-/* ContactSection.css */
 .contact-section {
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
   text-align: center;
-  padding: 2rem;
-  background: #222;
-  color: white;
-}
-
-.contact-section button {
-  background: #ff9800;
-  padding: 10px 20px;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.contact-section button:hover {
-  background: #e68900;
 }
