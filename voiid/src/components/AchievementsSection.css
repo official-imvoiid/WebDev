@@ -1,7 +1,6 @@
-          <div className="bg-gray-800 rounded-2xl p-6">
-            <div className="text-sm text-gray-400 mb-2">Recent</div>
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl">Achievements</h2>
-              <div className="text-gray-400">→</div>
-            </div>
-          </div>
+.achievements-section {
+  padding: 20px;
+  background-color: #282828;
+  color: white;
+  text-align: center;
+}
