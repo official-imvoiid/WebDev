@@ -1,11 +1,6 @@
-/* BrandingSection.css */
-.branding {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
+.branding-section {
+  padding: 20px;
+  background-color: #202020;
   color: white;
-}
-
-.branding h2 {
-  font-size: 2rem;
+  text-align: center;
 }
