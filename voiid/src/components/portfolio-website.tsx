@@ -1,125 +1,251 @@
-export default function Portfolio() {
+import { useState } from 'react';
+import { 
+  FaReddit, FaInstagram, FaYoutube, FaDiscord, FaPinterest, 
+  FaCode, FaBookOpen, FaCubes, FaBolt 
+} from 'react-icons/fa';
+
+const NavLink = ({ href, children }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="w-full min-h-screen bg-gray-900 text-white flex flex-col">
-      {/* Header */}
-      <header className="w-full p-4 flex justify-between items-center border-b border-gray-800">
-        <div className="text-xl font-bold text-white">VOIID</div>
-        <nav className="hidden md:flex space-x-4 items-center">
-          <a href="#work" className="text-gray-300 hover:text-white">Work</a>
-          <a href="#home" className="text-gray-300 hover:text-white">Home</a>
-          <a href="#about" className="text-gray-300 hover:text-white">About</a>
-          <a href="#resume" className="text-gray-300 hover:text-white">Resume</a>
-          <button className="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100">
+    <a 
+      href={href}
+      className={`text-sm transition-all duration-300 ${isHovered ? 'text-yellow-500 scale-110' : 'text-gray-300'}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {children}
+    </a>
+  );
+};
+
+const Card = ({ children, className = '' }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div 
+      className={`bg-zinc-800 rounded-xl p-6 transition-all duration-300
+        ${isHovered ? 'transform scale-105 shadow-xl bg-zinc-700' : ''} ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {children}
+    </div>
+  );
+};
+
+const MiniCard = ({ children, className = '' }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div 
+      className={`bg-transparent rounded-xl p-4 transition-all duration-300 ${isHovered ? 'scale-105' : ''} ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {children}
+    </div>
+  );
+};
+
+export default function Portfolio() {
+  const [hoveredBrand, setHoveredBrand] = useState(false);
+  const [hoveredButton, setHoveredButton] = useState(false);
+
+  const socialIcons = [
+    { name: 'Reddit', icon: <FaReddit className="hover:scale-125 hover:text-yellow-500 transition-all duration-300" /> },
+    { name: 'Instagram', icon: <FaInstagram className="hover:scale-125 hover:text-yellow-500 transition-all duration-300" /> },
+    { name: 'YouTube', icon: <FaYoutube className="hover:scale-125 hover:text-yellow-500 transition-all duration-300" /> },
+    { name: 'Discord', icon: <FaDiscord className="hover:scale-125 hover:text-yellow-500 transition-all duration-300" /> },
+    { name: 'Pinterest', icon: <FaPinterest className="hover:scale-125 hover:text-yellow-500 transition-all duration-300" /> },
+  ];
+
+  const whatIDo = [
+    { 
+      label: 'Develop', 
+      icon: (
+        <FaCode className="w-8 h-8 mx-auto transition-transform duration-300 group-hover:rotate-6 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]" />
+      ) 
+    },
+    { 
+      label: 'Literature', 
+      icon: (
+        <FaBookOpen className="w-8 h-8 mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]" />
+      ) 
+    },
+    { 
+      label: '3D & Editing', 
+      icon: (
+        <FaCubes className="w-8 h-8 mx-auto transition-transform duration-300 group-hover:-translate-y-1 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]" />
+      ) 
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-zinc-900 text-white">
+      <header className="max-w-5xl mx-auto p-6 flex justify-between items-center">
+        <div 
+          className={`font-bold text-xl transition-all duration-300 ${hoveredBrand ? 'text-yellow-500 scale-110' : ''}`}
+          onMouseEnter={() => setHoveredBrand(true)}
+          onMouseLeave={() => setHoveredBrand(false)}
+        >
+          VOIID
+        </div>
+        <nav className="flex items-center gap-6">
+          <NavLink href="#work">Work</NavLink>
+          <NavLink href="#home">Home</NavLink>
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#resume">Resume</NavLink>
+          <button 
+            className={`text-sm px-4 py-2 rounded-full transition-all duration-300 
+              ${hoveredButton ? 'bg-yellow-500 text-white scale-105' : 'bg-white text-black'}`}
+            onMouseEnter={() => setHoveredButton(true)}
+            onMouseLeave={() => setHoveredButton(false)}
+          >
             GET IN TOUCH
           </button>
         </nav>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-grow p-4 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* Hero Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="w-12 h-12 bg-blue-500 rounded-full mb-4"></div>
-            <h1 className="text-2xl font-bold mb-2">Hey, I'm Voiid 👋</h1>
-            <p className="text-gray-400">"A Developer & CyberSecurity Student"</p>
-          </div>
+      <main className="max-w-5xl mx-auto p-6">
+        <div className="grid grid-cols-3 gap-4">
+          <Card className="col-span-1 group">
+            <img 
+              src="/api/placeholder/48/48" 
+              alt="Profile" 
+              className="rounded-full mb-4 transition-transform duration-300 group-hover:scale-110" 
+            />
+            <h1 className="text-2xl font-semibold mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              Hey, I'm Voiid 👋
+            </h1>
+            <p className="text-gray-400 transition-all duration-300 group-hover:text-white">
+              "A Developer & CyberSecurity Student"
+            </p>
+          </Card>
 
-          {/* Resume Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="text-sm text-gray-400 mb-2">LEARN MORE ABOUT ME</div>
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl">See my resume</h2>
-              <div className="text-gray-400">→</div>
+          <Card className="col-span-1 group">
+            <div className="text-sm text-gray-400 mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              LEARN MORE ABOUT ME
             </div>
-          </div>
-
-          {/* Achievements Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="text-sm mb-2">Recent</div>
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl">Achievements</h2>
-              <div className="text-gray-400">→</div>
-            </div>
-          </div>
-
-          {/* Papers Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="text-sm mb-2">My Papers</div>
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl">Research</h2>
-              <div className="text-gray-400">→</div>
-            </div>
-          </div>
-
-          {/* GitHub Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="flex justify-center items-center h-full">
-              <div className="text-4xl text-yellow-500">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
+            <div className="flex items-center justify-between">
+              <div className="text-xl transition-all duration-300 group-hover:text-yellow-500">
+                See my resume
               </div>
+              <span className="transform transition-all duration-300 group-hover:scale-125 group-hover:translate-x-2 group-hover:text-blue-500 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]">
+                →
+              </span>
             </div>
-          </div>
+          </Card>
 
-          {/* About Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="text-sm text-gray-400 mb-2">BRANDING</div>
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl">About Voiid</h2>
-              <div className="text-gray-400">→</div>
+          <Card className="col-span-1 group">
+            <div className="text-sm text-gray-400 mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              Recent
             </div>
-          </div>
+            <div className="flex items-center justify-between">
+              <div className="text-xl transition-all duration-300 group-hover:text-yellow-500">
+                Achievements
+              </div>
+              <span className="transform transition-all duration-300 group-hover:scale-125 group-hover:translate-x-2 group-hover:text-blue-500 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]">
+                →
+              </span>
+            </div>
+          </Card>
 
-          {/* Contact Section */}
-          <div className="col-span-1 md:col-span-2 bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <h2 className="text-xl mb-2">Collaborate together!</h2>
-            <div className="text-yellow-500 text-xl font-medium">Get in touch now</div>
-          </div>
+          <Card className="col-span-1 group">
+            <div className="text-sm text-gray-400 mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              My Papers
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="text-xl transition-all duration-300 group-hover:text-yellow-500">
+                Research
+              </div>
+              <span className="transform transition-all duration-300 group-hover:scale-125 group-hover:translate-x-2 group-hover:text-blue-500 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]">
+                →
+              </span>
+            </div>
+          </Card>
 
-          {/* What I Do Section */}
-          <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-            <div className="text-sm text-gray-400 mb-4">WHAT I DO</div>
+          <Card className="col-span-1 group">
+            <div className="text-yellow-500 w-16 h-16 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 mx-auto">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+          </Card>
+
+          <Card className="col-span-1 group">
+            <div className="text-sm text-gray-400 mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              BRANDING
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="text-xl transition-all duration-300 group-hover:text-yellow-500">
+                About Voiid
+              </div>
+              <span className="transform transition-all duration-300 group-hover:scale-125 group-hover:translate-x-2 group-hover:text-blue-500 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,1)]">
+                →
+              </span>
+            </div>
+          </Card>
+
+          <Card className="col-span-2 group">
+            <h2 className="text-xl mb-2 transition-all duration-300 group-hover:text-yellow-500">
+              Collaborate together!
+            </h2>
+            <div className="text-yellow-500 text-xl transition-all duration-300 group-hover:scale-105">
+              Get in touch now
+            </div>
+          </Card>
+
+          <Card className="col-span-1">
+            <div className="text-sm text-gray-400 mb-6">WHAT I DO</div>
             <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-2xl text-yellow-500 mb-2">&lt;/&gt;</div>
-                <div>Develop</div>
-              </div>
-              <div>
-                <div className="text-2xl text-yellow-500 mb-2">📚</div>
-                <div>Literature</div>
-              </div>
-              <div>
-                <div className="text-2xl text-yellow-500 mb-2">📦</div>
-                <div>3D & Editing</div>
-              </div>
+              {whatIDo.map(({ label, icon }) => (
+                <MiniCard key={label} className="group">
+                  <div className="mb-2">
+                    {icon}
+                  </div>
+                  <div className="text-sm text-center transition-all duration-300">
+                    {label}
+                  </div>
+                </MiniCard>
+              ))}
             </div>
-          </div>
+          </Card>
         </div>
 
-        {/* Quote */}
-        <div className="text-center py-8">
-          <h2 className="text-xl font-medium">"BE A CHANGE OF BEGINNING"</h2>
+        <div className="text-center py-12">
+          <h2 className="text-3xl font-medium transition-all duration-300 group-hover:text-yellow-500">
+            "BE A CHANGE OF BEGINNING"
+          </h2>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="w-full p-8 text-center border-t border-gray-800">
-        <div className="text-xl font-bold mb-4">VOIID</div>
-        <nav className="mb-4 space-x-4">
-          <a href="#home" className="text-gray-300 hover:text-white">Home</a>
-          <a href="#portfolio" className="text-gray-300 hover:text-white">Portfolio</a>
-          <a href="#about" className="text-gray-300 hover:text-white">About</a>
-          <a href="#resume" className="text-gray-300 hover:text-white">Resume</a>
+      <footer className="max-w-5xl mx-auto p-8 text-center">
+        <div 
+          className="text-xl font-bold mb-6 transition-all duration-300 hover:text-yellow-500 hover:scale-110"
+          onMouseEnter={() => setHoveredBrand(true)}
+          onMouseLeave={() => setHoveredBrand(false)}
+        >
+          VOIID
+        </div>
+        <nav className="mb-6 flex justify-center gap-6">
+          {['Home', 'Portfolio', 'About', 'Resume'].map(item => (
+            <NavLink key={item} href={`#${item.toLowerCase()}`}>{item}</NavLink>
+          ))}
         </nav>
-        <div className="flex justify-center space-x-4 mb-4 text-gray-400">
-          <a href="#" className="hover:text-white">in</a>
-          <a href="#" className="hover:text-white">tw</a>
-          <a href="#" className="hover:text-white">dc</a>
-          <a href="#" className="hover:text-white">pi</a>
-          <a href="#" className="hover:text-white">rd</a>
-          <a href="#" className="hover:text-white">🌐</a>
+        <div className="flex justify-center gap-6 mb-6">
+          {socialIcons.map(({ name, icon }) => (
+            <a 
+              key={name} 
+              href="#" 
+              className="group text-2xl transition-all duration-300 hover:scale-125 hover:text-yellow-500"
+            >
+              {icon}
+            </a>
+          ))}
+          <a 
+            href="#" 
+            className="group text-2xl text-gray-400 transition-all duration-300 hover:scale-125 hover:text-yellow-500"
+          >
+            <FaBolt />
+          </a>
         </div>
         <div className="text-sm text-gray-400">
           © 2025 ALL RIGHTS RESERVED
