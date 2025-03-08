@@ -10,6 +10,11 @@ This repository contains two major projects:
 
 ## 📌 Projects Overview  
 
+WebDev/
+│── Charity/   
+│── Voiid/     
+└── README.md 
+
 ### 🏡 Charity - A ReactJS Template  
 **Charity** is a fully responsive **charity website template** built using **ReactJS + Vite**. This template is designed for **non-profits, donation platforms, and community outreach programs**, providing a structured layout for raising awareness and receiving donations.  
 
