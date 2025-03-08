@@ -106,4 +106,3 @@ For any inquiries or collaborations, feel free to connect:
 ---
 
 🚀 **Developed with ReactJS + Vite | Open Source & Scalable**  
-```
