@@ -16,7 +16,7 @@ A sleek, **responsive**, and **dynamic** portfolio built with **ReactJS + Vite**
 ## 📸 Screenshots  
 
 ### **🌍 Portfolio Preview**  
-![Portfolio Preview](https://github.com/official-imvoiid/WebDev/blob/main/Portfolio/Gui/Portfolio.png)  
+![Portfolio Preview](https://github.com/official-imvoiid/WebDev/blob/main/Voiid/Gui/WebSite.png)  
 
 ---
 
@@ -25,7 +25,7 @@ A sleek, **responsive**, and **dynamic** portfolio built with **ReactJS + Vite**
 1️⃣ **Clone the Repository**  
 ```sh
 git clone https://github.com/official-imvoiid/WebDev.git
-cd WebDev
+cd WebDev/Voiid
 ```  
 
 2️⃣ **Install Dependencies**  
