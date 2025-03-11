@@ -34,7 +34,7 @@ A smooth animation experience is included.
 1️⃣ **Clone the Repository**  
 ```sh
 git clone https://github.com/official-imvoiid/WebDev.git
-cd WebDev
+cd WebDev/Charity
 ```
 
 2️⃣ **Install Dependencies**  
