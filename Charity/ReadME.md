@@ -40,6 +40,7 @@ cd WebDev
 2️⃣ **Install Dependencies**  
 ```sh
 npm install
+npm install vite --save-dev
 ```
 
 3️⃣ **Run the Project**  
