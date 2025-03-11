@@ -38,6 +38,7 @@ WebDev/
 2. **Install Dependencies**  
    ```bash
    npm install
+   npm install vite --save-dev
    ```
 
 3. **Start Development Server**  
@@ -72,6 +73,7 @@ WebDev/
 2. **Install Dependencies**  
    ```bash
    npm install
+   npm install vite --save-dev
    ```
 
 3. **Start Development Server**  
