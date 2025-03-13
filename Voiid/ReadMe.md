@@ -30,10 +30,11 @@ cd WebDev/Voiid
 
 2️⃣ **Install Dependencies**  
 ```sh
-npm install
-npm install vite --save-dev
-npm install react-router-
-npm install emailjs-com
+npm install          
+npm install vite --save-dev 
+npm install react-router-dom  
+npm install emailjs-com  
+
 ```  
 
 3️⃣ **Run the Project**  
