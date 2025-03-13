@@ -32,6 +32,8 @@ cd WebDev/Voiid
 ```sh
 npm install
 npm install vite --save-dev
+npm install react-router-
+npm install emailjs-com
 ```  
 
 3️⃣ **Run the Project**  
