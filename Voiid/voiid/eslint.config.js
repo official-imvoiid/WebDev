@@ -23,7 +23,7 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^(motion|[A-Z_])' }],
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
@@ -38,6 +38,17 @@ export default [
     },
     rules: {
       // Disable 'no-undef' for this file since `module` is a Node.js global
+      'no-undef': 'off',
+    },
+  },
+  {
+    // ESLint config for server.js (Node environment)
+    files: ['server.js'],
+    env: {
+      node: true,
+    },
+    rules: {
+      // Disable 'no-undef' so that Node globals like require and process are allowed
       'no-undef': 'off',
     },
   },

@@ -89,7 +89,9 @@ const Portfolio = () => {
           <p className="card-subtitle">
             Let's create something amazing and build the future of tech together
           </p>
+          <Link to="/contact">
           <a href="#" className="card-link">Get in touch <span>→</span></a>
+          </Link>
         </div>
 
         {/* ----- About Section ----- */}
