@@ -72,10 +72,10 @@ WebDev/
 
 2. **Install Dependencies**  
    ```bash
-   npm install          
-   npm install vite --save-dev 
-   npm install react-router-dom  
-   npm install emailjs-com 
+   npm install
+   npm install vite --save-dev
+   npm install react-router-dom
+   npm install emailjs-com react-google-recaptcha
    ```
 
 3. **Start Development Server**  
