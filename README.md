@@ -1,4 +1,4 @@
-# 🌍 WebDev Repository  
+# 🌍 WebDev Repository 
 **A collection of web projects built with ReactJS + Vite**  
 
 This repository contains two major projects:  
@@ -11,7 +11,6 @@ This repository contains two major projects:
 ## 📌 Projects Overview  
 
 WebDev/
-
 │── Charity/   
 │── Voiid/     
 └── README.md 
